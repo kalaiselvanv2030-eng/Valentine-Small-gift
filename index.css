@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #ff5f8a, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+}
+
+/* MAIN CONTAINER */
+.container {
+    text-align: center;
+    padding: 30px;
+    width: 100%;
+    max-width: 380px;
+}
+
+/* BIG LOVE TITLE */
+.title {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+/* EMOTIONAL MESSAGE */
+.message {
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* BUTTON */
+button {
+    padding: 15px 32px;
+    font-size: 17px;
+    border: none;
+    border-radius: 35px;
+    background: #ff3366;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff144f;
+    transform: scale(1.05);
+}
+
+/* NAME GLOW ANIMATION */
+.name-animate {
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff;
+    }
+    to {
+        text-shadow: 0 0 30px #ffd1dc;
+    }
+}
+
+/* POPUP */
+.popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-box {
+    background: linear-gradient(135deg, #ff6a88, #ff99ac);
+    padding: 30px;
+    border-radius: 25px;
+    text-align: center;
+    animation: zoom 0.8s ease;
+}
+
+.popup-box h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.popup-text {
+    font-size: 19px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+@keyframes zoom {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* FOREVER PAGE */
+.forever {
+    text-align: center;
+    padding: 35px;
+}
+
+.forever-text {
+    font-size: 22px;
+    line-height: 1.8;
+    margin-top: 20px;
+}
+
+/* FLOATING HEARTS */
+.heart {
+    position: absolute;
+    bottom: -20px;
+    animation: floatUp 6s linear infinite;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
